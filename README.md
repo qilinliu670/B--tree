@@ -1,2 +1,3 @@
-# B+ tree
- 
+How to run: call make then ./b+tree. It assumes the data file is in the same directory and its name is SampleRecordssorted.csv.
+
+Explanation: functions defined in disk.cpp like block_read and block_write are used to access the disk. All functions in b+tree.cpp create a constant number of variables which store the data read from disk. Some of the functions are recursive, but they call themselves at most h times in one function call, so the total memory cost is O(h). When a function returns, its local variables are automatically freed.
